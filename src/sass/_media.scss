@@ -2,6 +2,12 @@
     .container {
         padding: 0 10px;
     }
+
+    .advantages{
+        &__item{
+            width: 215px;
+        }
+    }
 }
 
 @media (max-width: 425px) {
@@ -78,6 +84,15 @@
 }
 
 @media (max-width: 320px) {
+    .promo{
+        &__header{
+            font-size: 37px;
+        }
+        &__subheader{
+            font-size: 21px;
+        }
+    }
+
     .header {
         &__phone {
             font-size: 16px;
@@ -94,6 +109,11 @@
 
     .button {
         width: 145px;
+        &_main{
+            width: 230px;
+            height: 45px;
+            font-size: 15px;
+        }
     }
 
     .title {

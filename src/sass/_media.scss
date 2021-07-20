@@ -3,8 +3,8 @@
         padding: 0 10px;
     }
 
-    .advantages{
-        &__item{
+    .advantages {
+        &__item {
             width: 215px;
         }
     }
@@ -61,7 +61,7 @@
             margin-bottom: 50px;
 
             &:last-child {
-                margin-bottom: 0;
+                margin-bottom: 70px;
             }
         }
 
@@ -76,19 +76,31 @@
 
     .title {
         font-size: 28px;
+        text-align: center;
     }
 
-    // .button{
-    //     &_main{}
-    // }
+    .consultation {
+        &__descr {
+            text-align: center;
+        }
+    }
+
+    .feed-form {
+        // justify-content: center;
+        // align-items: center;
+        width: 280px;
+        margin: 0 auto;
+        margin-top: 36px;
+    }
 }
 
 @media (max-width: 320px) {
-    .promo{
-        &__header{
+    .promo {
+        &__header {
             font-size: 37px;
         }
-        &__subheader{
+
+        &__subheader {
             font-size: 21px;
         }
     }
@@ -109,10 +121,15 @@
 
     .button {
         width: 145px;
-        &_main{
+
+        &_main {
             width: 230px;
             height: 45px;
             font-size: 15px;
+        }
+
+        &_submit {
+            width: 100%;
         }
     }
 

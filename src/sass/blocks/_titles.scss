@@ -4,4 +4,10 @@
     font-weight: 700;
     color: $main-balck;
     text-align: center;
+
+    &_left {
+        font-size: 36px;
+        text-align: left;
+        color: white;
+    }
 }

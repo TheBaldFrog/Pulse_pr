@@ -1,0 +1,65 @@
+.footer {
+    position: relative;
+    height: 655px;
+
+    .fuck {
+        margin: 0;
+        border: 0;
+        padding: 0;
+    }
+
+    &__info {
+        position: absolute;
+        width: 460px;
+        height: 270px;
+        background-color: #c70101;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__addr {
+        font-size: 20px;
+        font-weight: 500;
+        color: #ffffff;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    &__phone {
+        display: block;
+        margin-top: 36px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+            color: #ffffff;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 38px;
+
+        &_item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border: 2px solid#fff;
+            border-radius: 100%;
+            margin: 0 15px;
+
+            img {
+                display: block;
+                max-width: 100%;
+            }
+        }
+    }
+}

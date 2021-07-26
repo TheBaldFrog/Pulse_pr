@@ -213,6 +213,20 @@
             margin-top: 10px;
         }
     }
+
+    .modal {
+        width: 320px;
+        padding: 28px 30px 30px 30px;
+
+        .feed-form {
+            width: 100%;
+        }
+
+        &__close {
+            right: -2px;
+            top: -30px;
+        }
+    }
 }
 
 @media (max-width: 320px) {
@@ -276,6 +290,20 @@
     .feed {
         &__text {
             width: 280px;
+        }
+    }
+
+    .modal {
+        width: 300px;
+        padding: 18px 15px 20px 15px;
+
+        .feed-form {
+            width: 100%;
+        }
+
+        &__close {
+            right: -2px;
+            top: -30px;
         }
     }
 }

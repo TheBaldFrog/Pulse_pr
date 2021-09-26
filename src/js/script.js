@@ -2,9 +2,9 @@ $(document).ready(function () {
     $('.carousel__inner').slick({
         dots: false,
         speed: 300,
-        // adaptiveHeight: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="../icons/slider/chevron_left_solid.png"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="../icons/slider/chevron_right_solid.png"></button>',
+        // adaptiveHeight: true,                                            attention at Path
+        prevArrow: '<button type="button" class="slick-prev"><img src="icons/slider/chevron_left_solid.png"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="icons/slider/chevron_right_solid.png"></button>',
         responsive: [
             {
                 breakpoint: 426,
@@ -67,4 +67,42 @@ $(document).ready(function () {
         });
     });
 
+    $('form').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+
+            $('form').trigger('reset');
+        })
+    })
+
+    // Smooth scroll and pageup
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    })
+
+    $("a[href='#up']").click(function () {
+        var _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px"});
+        return false;
+    });
+
+    wow = new WOW(
+        {
+        boxClass:     'wow',      // default
+        animateClass: 'animate__animated', // default
+        offset:       0,          // default
+        mobile:       true,       // default
+        live:         true        // default
+      }
+      )
+      wow.init();
 });
